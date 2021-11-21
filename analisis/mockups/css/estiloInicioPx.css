@@ -1,0 +1,261 @@
+/*
+    @author: Manuel Solís Gómez (masogo008@gmail.com)
+    @description: Archivo que pondra estilo especifico de inicio en medidas de pixeles
+    @file: estiloInicio.css
+    @license: totalmente libre
+*/
+/*Añadimos fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*Usado para todas las imagenes y videos, su tamaño se controlara por su contenedor*/
+img,video
+{
+    width: 100%;
+    height: auto;
+}
+/*body*/
+body
+{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+/*Añadimos layout y estilo al header y su contenido*/
+header
+{
+    width: 1440px; 
+    height: 400px;
+    position: relative; /*Colocamos la posicion relative para colocar el logo y el titulo*/
+
+    background-image: url(../recursos/img/header.jpg);
+    background-size: 100%;
+}
+header div
+{
+    width: 200px;
+
+    position: absolute; /*Colocamos la posicion absoluta para colocar el logo en la esquina superior izquierda*/
+    left:15px;
+    top:15px;
+}
+header h1
+{
+    position: absolute; /*Colocamos la posicion absoluta para centrar el titulo*/
+    left:310px;
+    top:160px;
+    font-size: 80px;
+    word-spacing: 10px;/*Separamos las palabras 10px*/
+
+    font-family: 'Praise', cursive;/*Aplicamos la fuente que hemos importado*/
+    color: white;
+}
+/*articulo de introducción*/
+#introduccion section
+{
+    width: 1100px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    padding: 50px;
+
+    background-color: yellow;
+}
+#introduccion section h2
+{
+    font-size: 40px;
+    padding-bottom: 30px; /*Separamos el titulo de la informacion*/
+
+    font-weight: bold;
+}
+#introduccion section p
+{
+    width: 1100px;
+}
+/*articulo de video*/
+#video
+{
+    width: 1440px;
+
+    background-color: blue;
+}
+#video section 
+{
+    width: 1100px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    padding: 30px 0;
+}
+/*articulo de editor de tarjetas*/
+#editor
+{
+    width: 1440px;
+}
+/*sección de para abrir editor*/
+#editor section:nth-child(1) 
+{
+    width: 1100px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    padding: 30px 50px;
+
+    background-color: coral;
+}
+#editor section:nth-child(1) div 
+{
+    width: 1100px;
+    display: flex; /*Organizamos su elementos contenidos*/
+    align-items: center; /*Centramos verticalmente el texto*/
+}
+#editor section:nth-child(1) div div
+{
+    width: 100px;
+}
+#editor section:nth-child(1) h2
+{
+    font-size: 40px;
+    padding-left: 10px; /*Separamos el texto del boton*/
+    width: 484px;
+
+    font-weight: bold;
+}
+/*sección de eleccion de frase*/
+#editor section:nth-child(2) 
+{
+    width: 1100px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    padding: 30px 50px;
+
+    background-color: rgb(160, 43, 0);
+}
+#editor section:nth-child(2) select
+{
+    width: 600px;
+    padding: 15px;
+}
+#editor section:nth-child(2) textarea
+{
+    width: 1070px;
+    height: 270px;
+    padding: 15px;
+}
+#editor section:nth-child(2) select, #editor section:nth-child(2) textarea
+{
+    margin: 30px auto;  /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    display: block;  /* Eliminamos algunos valores por defecto que contienen los elementos*/
+    border: 0;
+    font-size: 20px;   /* Colocamos el tamaño y el tipo de la letra ya que no toma el del body*/
+
+    font-family: 'Roboto', sans-serif;
+}
+/*sección de eleccion de fondo*/
+#editor section:nth-child(3) 
+{
+    width: 1440px;
+    height: 400px;
+    position: relative; /*Posicianamos el elemento en relative para colocar los elementos dentros de el*/
+
+    background-color: rgb(125, 125, 255);
+}
+#editor section:nth-child(3) .desl
+{
+    width: 100px;
+    position: absolute; /*Posicionamos a los 'botones' de cambiar imagen centrado verticalmente*/
+    top: 150px;
+
+    z-index: 2; /*Colocamos el 'boton' por encima de los otros elementos*/
+}
+#editor section:nth-child(3) .desl:first-child
+{
+   left: 50px;
+}
+#editor section:nth-child(3) .desl:last-child
+{
+   left: 1290px;
+}
+#editor section:nth-child(3) #fondos
+{
+    display: flex; /*Organizamos su elementos contenidos*/
+    position: absolute; /*Posicionamos el slider en el centro del contenedor*/
+    top: 56px;
+}
+#editor section:nth-child(3) #fondos div
+{
+    width: 288px;
+    height: 288px;
+    display: flex; /*Usamos el flex para centrar verticalmente las imagenes de fondo*/
+    align-items: center;
+
+    background-color: darkblue;
+}
+/*sección de eleccion de plantilla*/
+#editor section:nth-child(4)
+{
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    position: relative; /*Posicianamos el elemento en relative para colocar los elementos dentros de el*/
+    
+    background-color: rgb(250, 175, 0);
+}
+#editor section:nth-child(4) div
+{
+    width: 400px;
+    height: 400px;
+    position: absolute; /*Posicionamos los diferentes tipos de plantillas para que dos se encuentren arriba a los lados y otro en el centro sobre estas dos*/
+
+    background-color: darkcyan;
+}
+#editor section:nth-child(4) div:nth-child(1),#editor section:nth-child(4) div:nth-child(3)
+{
+    top: 50px;
+}
+#editor section:nth-child(4) div:nth-child(1)
+{
+    left: 100px;
+}
+#editor section:nth-child(4) div:nth-child(3)
+{
+    left: 700px;
+}
+#editor section:nth-child(4) div:nth-child(2)
+{
+    top: 150px;
+    left: 400px;
+
+    z-index: 2; /*La plantilla del centro se colocara encima de las demas*/
+}
+/*sección de eleccion de nombres*/
+#editor section:nth-child(5)
+{
+    width: 1200px;
+    margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    
+    background-color: rgb(113, 0, 148);
+    text-align: center; /* Lo usamos para centrar el boton de creacion de tarjetas*/
+}
+#editor section:nth-child(5) form div
+{
+    width: 1200px;
+    padding: 30px 0;
+    display: flex; /*Organizamos su elementos contenidos y los centramos verticalmente*/
+    align-items: center;
+}
+#editor section:nth-child(5) form div label
+{
+    width: 100px;
+    display: inline-block; /* Colocamos los label en este display para que podemos colocar el ancho que deseamos*/
+}
+#editor section:nth-child(5) form div input[type="text"]
+{
+    width: 470px;
+    border: 0; /* Eliminamos algunos valores por defecto que contienen los elementos*/
+    padding: 15px;
+    font-size: 20px; /* Colocamos el tamaño y el tipo de la letra ya que no toma el del body*/
+
+    font-family: 'Roboto', sans-serif;
+}
+#editor section:nth-child(5) form button
+{
+    width: 350px;
+    margin: 30px 0;
+    padding: 15px;
+    font-size: 20px; /* Colocamos el tamaño y el tipo de la letra ya que no toma el del body*/
+    font-weight: bold; 
+
+    font-family: 'Roboto', sans-serif;
+}
