@@ -14,10 +14,6 @@ img,video
     height: auto;
 }
 /*body*/
-html
-{
-    width: 1440px;
-}
 body
 {
     font-size: 20px;
