@@ -7,7 +7,7 @@
 /*Añadimos fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Praise&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-/*Usado para todas las imagenes y videos, su tamaño se controlara por su contenedor*/
+/*Usado para todas las imagenes y videos , .., su tamaño se controlara por su contenedor*/
 img,video
 {
     width: 100%;
@@ -113,7 +113,6 @@ header h1
 {
     font-size: 2em; /*40px en base de 20px*/
     padding-left: 0.909091%; /*Separamos el texto del boton, 10px en base de 1100px*/
-    width: 44%; /* 484px en base de 1100px*/
 
     font-weight: bold;
 }
@@ -190,8 +189,9 @@ header h1
 #editor section:nth-child(4)
 {
     width: 83.33334%; /* 1200px en base de 1440px*/
-    height: 30em; /*30em en base de 20px*/
+    height: 37.5em; /*750px en base de 20px*/
     margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
+    position: relative; /*Posicianamos el elemento en relative para colocar los elementos dentros de el*/
     
     background-color: #FFB04F;
 }
@@ -199,23 +199,29 @@ header h1
 {
     width: 33.33334%; /* 400px en base de 1200px*/
     height: 20em; /*400px en base de 20px*/
-    float: left; /*Hacemos que se coloquen una al lado de otras*/
-    position: relative; /*Posicionamos los diferentes tipos de plantillas para que dos se encuentren arriba a los lados y otro en el centro sobre estas dos*/
-    top: 2.5em; /*50px en base de 20px*/
+    position: absolute; /*Posicionamos los diferentes tipos de plantillas para que dos se encuentren arriba a los lados y otro en el centro sobre estas dos*/
+    display: flex; /*Usado para centrar las imagenes*/
+    align-items: center;
 
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, transparent, rgba(0, 0, 0, 0.2));
     background-color: #0079B6;
+}
+#editor section:nth-child(4) div:nth-child(1),#editor section:nth-child(4) div:nth-child(3)
+{
+    top: 2.5em; /*50px en base de 20px*/
 }
 #editor section:nth-child(4) div:nth-child(1)
 {
-    left: 8.3334%; /* 100px en base de 1440px*/
+    left: 8.33334%; /* 100px en base de 1200px*/
 }
 #editor section:nth-child(4) div:nth-child(3)
 {
-    left: -8.3334%; /* 100px en base de 1440px*/
+    left: 58.33334%; /* 700px en base de 1200px*/
 }
 #editor section:nth-child(4) div:nth-child(2)
 {
     top: 7.5em; /*150px en base de 20px*/
+    left: 33.33334%; /* 400px en base de 1200px*/
 
     z-index: 2; /*La plantilla del centro se colocara encima de las demas*/
 }

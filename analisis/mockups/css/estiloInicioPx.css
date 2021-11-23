@@ -188,7 +188,6 @@ header h1
     width: 1200px;
     height: 600px;
     margin: 0 auto; /* Centramos el contenedor con el margin, al ser auto colocara un margen a los lados de forma automatica*/
-    position: relative; /*Posicianamos el elemento en relative para colocar los elementos dentros de el*/
     
     background-color: rgb(250, 175, 0);
 }
@@ -196,13 +195,10 @@ header h1
 {
     width: 400px;
     height: 400px;
-    position: absolute; /*Posicionamos los diferentes tipos de plantillas para que dos se encuentren arriba a los lados y otro en el centro sobre estas dos*/
-
-    background-color: darkcyan;
-}
-#editor section:nth-child(4) div:nth-child(1),#editor section:nth-child(4) div:nth-child(3)
-{
+    float: left; /*Hacemos que se coloquen una al lado de otras*/
+    position: relative; /*Posicionamos en relative para modificarlos segun su posicion*/
     top: 50px;
+    background-color: darkcyan;
 }
 #editor section:nth-child(4) div:nth-child(1)
 {
@@ -210,12 +206,11 @@ header h1
 }
 #editor section:nth-child(4) div:nth-child(3)
 {
-    left: 700px;
+    left: -100px; 
 }
 #editor section:nth-child(4) div:nth-child(2)
 {
     top: 150px;
-    left: 400px;
 
     z-index: 2; /*La plantilla del centro se colocara encima de las demas*/
 }
