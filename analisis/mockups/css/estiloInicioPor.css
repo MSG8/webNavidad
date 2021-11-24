@@ -41,8 +41,8 @@ header h1
 {
     position: absolute; /*Colocamos la posicion absoluta para centrar el titulo*/
     left:21.52778%; /* 310px en base de 1440px*/
-    top:8rem; /* 160px en base de 20px de tamaño de letra*/
     font-size: 4em; /* 80px en base de 20px de tamaño de letra*/
+    top: 2em; /* 160px en base de 80px de tamaño de letra*/
     word-spacing: 10px;
 
     font-family: 'Praise', cursive;/*Aplicamos la fuente que hemos importado*/
@@ -169,7 +169,7 @@ header h1
 }
 #editor section:nth-child(3) .desl:last-child
 {
-   left: 89.5833%; /* 50px en base de 1440px*/
+   right: 3.4722%; /* 50px en base de 1440px*/
 }
 #editor section:nth-child(3) #fondos
 {
@@ -202,6 +202,8 @@ header h1
     float: left; /*Hacemos que se coloquen una al lado de otras*/
     position: relative; /*Posicionamos los diferentes tipos de plantillas para que dos se encuentren arriba a los lados y otro en el centro sobre estas dos*/
     top: 2.5em; /*50px en base de 20px*/
+    display: flex;
+    align-items: center;
 
     background-color: #0079B6;
 }
@@ -261,4 +263,84 @@ header h1
 
     font-family: 'Roboto', sans-serif;
     background-color: #FF8C00;
+}
+@media only screen and (max-width:950px)
+{
+    /*Cambiamos tamaño en em, asi cambiaremos el alto*/
+    body,#editor section:nth-child(5) form div input[type="text"]
+    {
+        font-size: 15px;
+    }
+    /*Al llegar a 950px cambiara el slider quitando uno de los elementos y cambiandole su tamaño*/
+    #editor section:nth-child(3) #fondos div 
+    {
+        width: 25%; /* 327px en base de 950px*/
+    }
+    #editor section:nth-child(3) #fondos div:nth-child(1)
+    {
+       display: none;
+    }
+    /*Bajamos las flechas*/
+    #editor section:nth-child(3) .desl
+    {
+        top: 8.5em; /*150px en base de 20px*/
+    }
+}
+@media only screen and (max-width:550px)
+{
+    /*Cambiamos tamaño en em, asi cambiaremos el alto*/
+    body,#editor section:nth-child(5) form div input[type="text"]
+    {
+        font-size: 10px;
+    }
+    /*Al llegar a 550px cambiara el slider quitando uno de los elementos y cambiandole su tamaño*/
+    #editor section:nth-child(3) #fondos div 
+    {
+        width: 50%; /* 275px en base de 550px*/
+    }
+    #editor section:nth-child(3) #fondos div:nth-child(3),#editor section:nth-child(3) #fondos div:nth-child(2)
+    {
+       display: none;
+    }
+    /*Bajamos las flechas*/
+    #editor section:nth-child(3) .desl
+    {
+        width: 10%; /*55px en base de 550px*/
+        top: 9.5em; /*190px en base de 20px*/
+    }
+}
+@media only screen and (max-width:500px)
+{
+    /*En 500px cambiaremos su displaya flex para que se coloquen pegados a la seccion y que se centren horizontakmente, si alguno sale fuera del contenedor se colocara abajo*/
+    #editor section:nth-child(4)
+    {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #editor section:nth-child(4) div
+    {
+        width: 50%; /*250px en base de 500px*/
+        clear: left; /*Quitamos el flotamiento*/
+        position: static; /*Quitamos la posicion relativa*/
+        z-index: 1;
+    }
+}
+@media only screen and (max-width:320px)
+{
+    /*Al llegar a 320px cambiara el slider quitando uno de los elementos y cambiandole su tamaño*/
+    #editor section:nth-child(3) #fondos div 
+    {
+        width: 100%; /* 320px en base de 320px*/
+    }
+    #editor section:nth-child(3) #fondos div:nth-child(4)
+    {
+       display: none;
+    }
+    /*Cambiamos el tamaño de la flecha*/
+    #editor section:nth-child(3) .desl
+    {
+        width: 20%; /* 64px en base de 320px*/
+    }
 }
