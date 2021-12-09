@@ -7,18 +7,21 @@
 		<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1" />
         <meta name="keywords" content="Navidad, Fundacion Loyola, Valores Ignacianos" />
 		<title> Navidad con Fundación Loyola </title>
-		<link rel="icon" type="image/gif/png" href="recursos/img/iconoWeb.png" />
+		<link rel="icon" type="image/gif/png" href="img/iconoWeb.png" />
 		<link rel="stylesheet" type="text/css" href="css/estiloGeneral.css" />
 		<link rel="stylesheet" type="text/css" href="css/estiloInicio.css" />
 	</head>
     <body>
+		<audio autoplay>
+            <source src="recursos/musica/campanasSobre.mp3" type="audio/ogg">
+        </audio>
         <header>
 			<div>
 				<a href="https://fundacionloyola.com/">
-					<img src="recursos/img/icono.jpg"/>
+					<img src="img/icono.jpg"/>
 				</a>
 			</div>
-			<h1>Navidad en la Escuela E.V.G.</h1>
+			<h1>Navidad en la Escuela V.G.</h1>
         </header>
 		<article id="introduccion">
 			<section>
@@ -38,17 +41,22 @@
                 
                 </iframe>
 			</section>
+			<section>
+                <video controls>
+					<source src="recursos/video/valoresFundacion2.mp4" type="video/mp4">
+				</video>
+			</section>
 		</article>
 		<article id="editor">
-			<section>
+			<section id="desplegable">
 				<div>
 					<div>
-						<img src="recursos/img/botonEditor.png" />
+						<img src="img/botonEditor.png" />
 					</div>
 					<h2> Editor de tarjetas navideñas </h2>
 				</div>
 			</section>
-			<section>
+			<section id="frase">
 				<form>
 					<select name="selecionFrase">
 						<option value="vacio" selected="selected" hidden="hidden"> Elija el tipo de frase que desea </option>
@@ -61,43 +69,43 @@
 					<textarea name="verFrase" readonly="readonly"> Aquí se mostrará la frase seleccionada al azar de su categoria </textarea>
 				</form>
 			</section>
-			<section>
+			<section id="slider">
 				<div class="desl">
-					<img src="recursos/img/botonIzq.png" />
+					<img src="img/botonIzq.png" />
 				</div>
 				<div id="fondos">
 					<div>
-						<img src="recursos/img/fondo.jpg" />
+						<img src="img/fondo1.png" />
 					</div>
 					<div>
-						<img src="recursos/img/fondo.jpg" />
+						<img src="img/fondo2.png" />
 					</div>
 					<div>
-						<img src="recursos/img/fondo.jpg" />
+						<img src="img/fondo3.png" />
 					</div>
 					<div>
-						<img src="recursos/img/fondo.jpg" />
+						<img src="img/fondo4.png" />
 					</div>
 					<div>
-						<img src="recursos/img/fondo.jpg" />
+						<img src="img/fondo5.png" />
 					</div>
 				</div>
 				<div class="desl">
-					<img src="recursos/img/botonDer.png" />
+					<img src="img/botonDer.png" />
 				</div>
 			</section>
-			<section>
+			<section id="plantilla">
 				<div>
-					<img src="recursos/img/plantilla.jpg" />
+					<img src="img/padresPlantilla.png" title="Adultos" />
 				</div>
 				<div>
-					<img src="recursos/img/plantilla.jpg" />
+					<img src="img/alumnosPlantilla.png" title="Alumnos" />
 				</div>
 				<div>
-					<img src="recursos/img/plantilla.jpg" />
+					<img src="img/trabajadoresPlantilla.png" title="Miembros" />
 				</div>
 			</section>
-			<section>
+			<section id="dedicar">
 				<form>
 					<div>
 						<label>
@@ -109,9 +117,10 @@
 						</label>
 						<input type="text" value="" name="para" placeholder="A quien lo dedico" />
 					</div>
-					<button> CREAR TARJETA </button>
+					<a> CREAR TARJETA </a>
 				</form>
 			</section>
 		</article>
+		<script src="js/app.js"></script>
     </body>
 </html>
